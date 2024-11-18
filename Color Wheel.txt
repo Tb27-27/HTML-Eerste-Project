@@ -1,0 +1,25 @@
+#E38510
+#E3BA10
+
+Main: #E3A010
+
+#E36010
+#E3D310
+#E3B85C
+
+
+Hoofdkleur: Oranje/geel
+
+subkleuren: Oranje/geel/bruin
+
+Emoties:
+Dependable
+Simple
+Confidence
+Creativity
+Warmth
+
+Analogue kleuren
+
+Lichtere kleuren voor een blijere website bezoeker
+
