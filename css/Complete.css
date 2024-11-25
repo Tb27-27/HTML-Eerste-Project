@@ -1,26 +1,103 @@
 :root {
---kleurPrimary:#e36a00;
---kleurSecondary: #c2a388;
---kleurTertiary: ;
---kleurText: black;
+    --kleurPrimary: #E3A010;
+    --kleurSecondary: #E3BA10;
+    --kleurTertiary: #E38510;
+    --kleurQuadratary: #E36010;
+    --kleurSeptary: #E3D310;
+    --kleurOctary: #E3B85C;
+    --kleurText: black;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--kleurPrimary);
+    color: var(--kleurText);
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 95vh;
+    position: relative;
+    background-color: var(--kleurSecondary);
+    z-index: 1;
+}
+
+.bookCover {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+    text-align: center;
+    align-content: center;
 
 }
 
-h1 {
-
+.bookCover h1 {
+    color: var(--kleurTertiary);
 }
 
-h2 {
-
+.bookCover button {
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
-h3 {
-
+form {
+    margin: 25px;
 }
 
-p {
+input {
+    margin: 10px;
+}
 
+#searchRecipeKnop{
+    font-weight: 900;
+    background-color: var(--kleurOctary);
+}
+
+#searchRecipeKnop:hover {
+    background-color: var(--kleurQuadratary);
+}
+
+
+button {
+    font-weight: 900;
+    background-color: var(--kleurOctary);
+}
+
+button:hover {
+    background-color: var(--kleurQuadratary);
+}
+
+footer {
+    width: 6vw;
+    height: 6vh;   
+    position: absolute;
+    padding: auto;
+    right: 2vw;
+    bottom: 0.5vh;
+    z-index: 10;
+}
+
+#contactKnop {
+    width: auto;
+    height: auto;
+    text-align: center;
+    opacity: 0.5;
+    background-color: var(--kleurSeptary);
+}
+
+#contactKnop:hover {
+    opacity: 0.95;
+    background-color: var(--kleurQuadratary);
 }
