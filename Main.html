@@ -17,11 +17,18 @@
                 <input type="submit" id="searchRecipeKnop" value="Submit">
             </form>
             <button id = "randomReceptKnop">Random Recept</button>
-            
         </div>
+        <div class="bookCoverBack"></div>
+        <div class="bookBackBack"></div>
     </div>
     <footer>
-        <button id = "contactKnop" onclick="">Contact</button>
+        <button id = "contactKnop">Contact</button>
     </footer>
+
+    <script>
+        document.getElementById("contactKnop").addEventListener("click", function() {
+          window.location.href = "Contact.html";
+        });
+    </script>
 </body>
 </html>
