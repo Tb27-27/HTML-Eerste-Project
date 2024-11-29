@@ -41,22 +41,36 @@ body {
     align-content: center;
     border-radius: 0px 15px 15px 0px;
     transform-style: preserve-3d;
+    perspective: 1000px;
+    transform-origin: left;
+    animation-fill-mode: both;
+    border: 2px solid white;
+}
+
+.openBook {
     animation-name: openBook;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-fill-mode: both;
-    border: 2px solid white;
+}
+
+.closeBook {
+    animation-name: openBook;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
 }
 
 .bookCover {
     z-index: 2;
     backface-visibility: hidden;
-    transform:rotateY(0deg);
+    transform: rotateY(0deg); /* Starts closed */
+    
 }
 
 .bookCoverBack {
     z-index: 1;
     background: black;
+    transform: rotateY(0deg); /* Starts closed */
 }
 
 .bookBackBack {
@@ -75,15 +89,10 @@ body {
     color: var(--kleurTertiary);
 }
 
-@keyframes openBook {
-    0% {
-        transform: (0deg);
-    }
 
-    100% {
-        transform: scale(-1, 1);
-        left: -0;
-    }
+@keyframes openBook { 
+    0% { transform: rotateY(0deg); } 
+    100% { transform: rotateY(-180deg) }
 }
 
 .bookCover button {
