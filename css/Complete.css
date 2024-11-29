@@ -31,6 +31,67 @@ body {
     border-radius: 15px;
 }
 
+.bookCover, .bookCoverBack{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    align-content: center;
+    border-radius: 0px 15px 15px 0px;
+    transform-style: preserve-3d;
+    animation-name: openBook;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    border: 2px solid white;
+}
+
+.bookCover {
+    z-index: 2;
+    backface-visibility: hidden;
+    transform:rotateY(0deg);
+}
+
+.bookCoverBack {
+    z-index: 1;
+    background: black;
+}
+
+.bookBackBack {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    align-content: center;
+    border-radius: 0px 15px 15px 0px;
+    border: 2px solid white;
+}
+
+.bookCover h1 {
+    color: var(--kleurTertiary);
+}
+
+@keyframes openBook {
+    0% {
+        transform: (0deg);
+    }
+
+    100% {
+        transform: scale(-1, 1);
+        left: -0;
+    }
+}
+
+.bookCover button {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
 button {
     font-weight: 900;
     background-color: var(--kleurOctary);
