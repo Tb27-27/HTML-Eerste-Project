@@ -31,7 +31,7 @@ body {
     border-radius: 15px;
 }
 
-.bookCover, .bookCoverBack{
+.bookCover, .bookCoverBack, .bookCoverBackInverted, .bookBackBack{
     width: 50%;
     height: 100%;
     background-color: black;
@@ -47,12 +47,40 @@ body {
     border: 2px solid white;
 }
 
+/* Alle zwarte gedeeltes van het boek */
+
+.bookCover {
+    z-index: 5;
+    backface-visibility: hidden;
+    transform: rotateY(0deg); /* Starts closed */
+    
+}
+
+.bookCoverBack {
+    z-index: 4;
+    background: black;
+    transform: rotateY(0deg); /* Starts closed */
+}
+
+.bookCoverBackInverted {
+    transform: rotateY(180deg);
+    z-index: 4;
+}
+
+.bookBackBack{
+    z-index: 1;
+}
+
+
+/* animatie om het boek te openen */
 .openBook {
     animation-name: openBook;
     animation-duration: 2s;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
+/* animatie om het boek the sluiten */
 .closeBook {
     animation-name: openBook;
     animation-duration: 2s;
@@ -60,30 +88,40 @@ body {
     animation-direction: alternate-reverse;
 }
 
-.bookCover {
-    z-index: 2;
-    backface-visibility: hidden;
-    transform: rotateY(0deg); /* Starts closed */
-    
+
+/* Gele paginas */
+.page {
+    width: 98%;
+    height: 98%;
+    position: relative;
+    left: 0%;
 }
 
-.bookCoverBack {
-    z-index: 1;
-    background: black;
-    transform: rotateY(0deg); /* Starts closed */
-}
-
-.bookBackBack {
-    width: 50%;
+.pageFront,.pageBack {
+    width: 100%;
     height: 100%;
-    background-color: black;
-    position: absolute;
-    left: 50%;
+    background-color: var(--kleurTertiary);
+    color: var(--kleurText);
     text-align: center;
     align-content: center;
-    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    left: 0%;
+    border-radius: 0px 2px 2px 0px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform-origin: left;
+    animation-fill-mode: both;
     border: 2px solid white;
 }
+
+.pageFront{
+    z-index: 5;
+}
+
+.pageBack {
+    z-index: 4;
+}
+
 
 .bookCover h1 {
     color: var(--kleurTertiary);
@@ -101,6 +139,16 @@ body {
     margin: auto;
 }
 
+footer {
+    width: 6vw;
+    height: 6vh;   
+    position: absolute;
+    padding: auto;
+    right: 22.5vw;
+    bottom: 3vh;
+    z-index: 10;
+}
+
 button {
     font-weight: 900;
     background-color: var(--kleurOctary);
@@ -110,25 +158,30 @@ button:hover {
     background-color: var(--kleurQuadratary);
 }
 
-footer {
-    width: 6vw;
-    height: 6vh;   
-    position: absolute;
-    padding: auto;
-    right: 3vw;
-    bottom: 0.5vh;
-    z-index: 10;
-}
-
 #contactKnop {
     width: auto;
     height: auto;
     text-align: center;
     opacity: 0.5;
     background-color: var(--kleurSeptary);
+    font-weight: 900;
 }
 
 #contactKnop:hover {
+    opacity: 0.95;
+    background-color: var(--kleurQuadratary);
+}
+
+#returnToMain {
+    width: auto;
+    height: auto;
+    text-align: center;
+    opacity: 0.5;
+    background-color: var(--kleurSeptary);
+    font-weight: 900;
+}
+
+#returnToMain:hover {
     opacity: 0.95;
     background-color: var(--kleurQuadratary);
 }
