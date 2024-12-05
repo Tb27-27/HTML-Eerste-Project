@@ -9,23 +9,44 @@
 
 </head>
 <body>
-    <div class = "book">
-        <div class="bookCoverBackInverted"></div>
-        <div class="bookBackBack">
-            <div class="page">
-                    <div class="pageFront">
-
+    <div id = "book">
+        <div id = "bookCoverFrontInvertedFront">
+            <h1>Receptenboek</h1>
+        </div>
+        <div id = "bookCoverFrontInvertedBack"></div>
+        <div id="bookBackBack">
+            <div id="page">
+                    <div id="pageLeftBack"></div>
+                    <div id="pageLeft">
+                        <h1>Contact Form</h1>
                     </div>
-                    <div class="pageBack"></div>
+                    
+
+                    <div id="pageRight">
+                        <form action="">
+                            <label for="firstName">First name:</label><br>
+                            <input type="text" id="firstName" name="firstName" placeholder="John"><br>
+                            <label for="lastName">Last name:</label><br>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe"><br>
+                            
+                            <p>Wat was uw ervaring met deze site:</p>
+                            <input type="radio" id="goed" name="ervaring" value="goed">
+                            <label for="goed">Goed</label>
+                            <input type="radio" id="neutraal" name="ervaring" value="neutraal">
+                            <label for="neutraal">Neutraal</label>
+                            <input type="radio" id="slecht" name="ervaring" value="slecht">
+                            <label for="slecht">Slecht</label><br><br>
+                            
+                            <p><label for="Review">Review of Receptenboek:</label></p><br>
+                            <textarea id="Review" name="Review" rows="4" cols="50" placeholder="Please leave your opinions about this site here"></textarea><br><br>
+                            <input type="submit" value="Submit">
+                          </form> 
+                          <button id="returnToMain">Main</button>
                     </div>
                 </div>
-            <div class="pageBack"></div>
             </div>
         </div>
     </div>
-    <footer>
-        <button id="returnToMain">Main</button>
-    </footer>
 
     <script src="js/MainJavaScript.js"></script>
 </body>

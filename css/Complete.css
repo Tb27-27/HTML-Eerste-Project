@@ -19,7 +19,11 @@ body {
     color: var(--kleurText);
 }
 
-.book {
+#bookCover h1 , #bookCoverFrontInvertedFront h1{
+    color: white;
+}
+
+#book {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +35,7 @@ body {
     border-radius: 15px;
 }
 
-.bookCover, .bookCoverBack, .bookCoverBackInverted, .bookBackBack{
+#bookCover, #bookCoverBack, #bookCoverFrontInvertedFront, #bookCoverFrontInvertedBack, #bookBackBack{
     width: 50%;
     height: 100%;
     background-color: black;
@@ -49,55 +53,44 @@ body {
 
 /* Alle zwarte gedeeltes van het boek */
 
-.bookCover {
-    z-index: 5;
+#bookCover {
+    z-index: 1;
     backface-visibility: hidden;
     transform: rotateY(0deg); /* Starts closed */
     
 }
 
-.bookCoverBack {
-    z-index: 4;
+#bookCoverBack {
+    z-index: 1;
     background: black;
     transform: rotateY(0deg); /* Starts closed */
 }
 
-.bookCoverBackInverted {
+#bookCoverFrontInvertedBack {
     transform: rotateY(180deg);
-    z-index: 4;
+    backface-visibility: hidden;
+    z-index: 1;
 }
 
-.bookBackBack{
+#bookCoverFrontInvertedFront {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+#bookBackBack{
     z-index: 1;
 }
 
 
-/* animatie om het boek te openen */
-.openBook {
-    animation-name: openBook;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-/* animatie om het boek the sluiten */
-.closeBook {
-    animation-name: openBook;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-direction: alternate-reverse;
-}
-
-
 /* Gele paginas */
-.page {
+#page {
     width: 98%;
     height: 98%;
     position: relative;
-    left: 0%;
+    left: -0.25%;
 }
 
-.pageFront,.pageBack {
+#pageRight, #pageLeft, #pageLeftBack, #pageRightBack{
     width: 100%;
     height: 100%;
     background-color: var(--kleurTertiary);
@@ -111,29 +104,60 @@ body {
     perspective: 1000px;
     transform-origin: left;
     animation-fill-mode: both;
-    border: 2px solid white;
+    border: 2px dashed white;
 }
 
-.pageFront{
+
+
+#pageRightBack {
+    backface-visibility: visible;
+    z-index: 2;
+}
+
+#pageRight{
+    z-index: 3;
+}
+
+#pageLeftBack {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
     z-index: 5;
 }
 
-.pageBack {
+#pageLeft {
     z-index: 4;
+    transform: scalex(-1);
 }
 
+#pageLeft h1 {
+    transform: rotateY(180deg);
+}
 
-.bookCover h1 {
+#bookCover h1 {
     color: var(--kleurTertiary);
 }
 
-
-@keyframes openBook { 
-    0% { transform: rotateY(0deg); } 
-    100% { transform: rotateY(-180deg) }
+/* animatie om het boek te openen */
+.openBookAnimation {
+    animation-name: openBook;
+    animation-duration: 2s;
+    animation-timing-function: linear;
 }
 
-.bookCover button {
+/* animatie om het boek the sluiten */
+.closeBookAnimation {
+    animation-name: openBook;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes openBook { 
+    0% { transform: rotateY(0deg);}     
+    100% { transform: rotateY(180deg);}
+}
+
+#bookCover button {
     width: auto;
     height: auto;
     margin: auto;
