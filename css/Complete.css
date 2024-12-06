@@ -17,6 +17,29 @@ body {
     margin: 0;
     background-color: var(--kleurPrimary);
     color: var(--kleurText);
+    animation-fill-mode: both;
+}
+
+.zoomOut {
+    animation-name: zoomOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes zoomIn { 
+    0% {transform: scale(0.8);}     
+    100% {transform: scale(1)}
+}
+
+@keyframes zoomOut { 
+    0% {transform: scale(1);}     
+    100% {transform: scale(0.8)}
 }
 
 #bookCover h1 , #bookCoverFrontInvertedFront h1{
@@ -54,7 +77,7 @@ body {
 /* Alle zwarte gedeeltes van het boek */
 
 #bookCover {
-    z-index: 1;
+    z-index: 3;
     backface-visibility: hidden;
     transform: rotateY(0deg); /* Starts closed */
     
@@ -189,6 +212,7 @@ button:hover {
     opacity: 0.5;
     background-color: var(--kleurSeptary);
     font-weight: 900;
+    margin: 100px
 }
 
 #contactKnop:hover {
