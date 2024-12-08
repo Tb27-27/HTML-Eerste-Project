@@ -130,8 +130,6 @@ body {
     border: 2px dashed white;
 }
 
-
-
 #pageRightBack {
     backface-visibility: visible;
     z-index: 2;

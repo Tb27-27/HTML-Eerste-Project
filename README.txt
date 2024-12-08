@@ -1,1 +1,1 @@
-voor nu nog niet heel veel
+Voor nu werkt alleen de "Contact" knop op Main.html en de "Main" knop op Contact.html
