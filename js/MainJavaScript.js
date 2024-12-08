@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() { document.body.classList.add('zoomIn'); }, 1);  
         setTimeout(function() { document.getElementById("bookCover").classList.add("openBookAnimation"); }, 1); 
         setTimeout(function() { document.getElementById("bookCoverBack").classList.add("openBookAnimation"); }, 2);
-        setTimeout(function() { document.getElementById("bookCoverBack").style.zIndex = 15; }, 1000);
+        setTimeout(function() { document.getElementById("bookCoverBack").style.zIndex = 2; }, 1000);
         setTimeout(function() { window.location.href = "./Contact.html"; }, 2200);
     });
 });

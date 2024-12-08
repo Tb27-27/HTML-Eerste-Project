@@ -11,20 +11,29 @@
 <body>
     <div id = "book">
         <div id="bookCover">
-            <h1>Receptenboek</h1>
+            <article>
+                <h1>Receptenboek</h1>
 
-            <form action="/receptDatabase.html">
-                <input type="text" id="receptNaam" name="receptNaam" value="Recept Naam"><br>
-                <input type="submit" id="searchRecipeKnop" value="Submit">
-            </form>
-            <button id = "randomReceptKnop">Random Recept</button>
-            <br>
-            <button id = "contactKnop">Contact</button>
+                <form action="/receptDatabase.html">
+                    <input type="text" id="receptNaam" name="receptNaam" placeholder="Recept Naam"><br>
+                    <input type="submit" id="searchRecipeKnop" value="Submit">
+                </form>
+
+                <button id = "randomReceptKnop">Random Recept</button>
+                <br>
+                <button id = "contactKnop">Contact</button>
+            </article>
         </div>
+
+        <!-- <div id="pageLeftMainBack"></div>
+        <div id="pageLeftMain"></div>
+        <div id="pageRightMain"></div> -->
         <div id="bookCoverBack"></div>
-            <!-- <div id="pageLeftBack"></div>
-            <div id="pageLeft"></div> -->
         <div id="bookBackBack"></div>
+
+
+        <div id="bookBackBack">
+        </div>
     </div>
     <script src="js/MainJavaScript.js"></script>
 </body>
