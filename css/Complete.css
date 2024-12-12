@@ -163,6 +163,7 @@ article {
 .inverted {
     transform: rotateY(180deg); 
 }
+
 #pageRightBack {
     backface-visibility: visible;
     z-index: 2;
