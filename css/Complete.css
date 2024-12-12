@@ -36,13 +36,13 @@ body {
 }
 
 @keyframes zoomIn { 
-    0% {transform: scale(0.8);}     
+    0% {transform: scale(0.9);}     
     100% {transform: scale(1)}
 }
 
 @keyframes zoomOut { 
     0% {transform: scale(1);}     
-    100% {transform: scale(0.8)}
+    100% {transform: scale(0.9)}
 }
 
 h1 {
@@ -142,10 +142,6 @@ h1 {
     border: 2px dashed white;
     background-image: url("../images/paper-texture3.png");
 
-}
-
-#pageLeftMain, #pageRightMain {
-    z-index: 2;
 }
 
 article {
