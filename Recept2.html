@@ -8,31 +8,30 @@
     <link rel="stylesheet" href="css/recept1.css">
 </head>
 <body>
-    <div class = "book">
-        <div class="bookCover">
-            <h1>Tom's Receptboek</h1>
-
-            <form action="/receptDatabase.html">
-                <input type="text" id="receptNaam" name="receptNaam" value="Recept Naam"><br>
-                <input type="submit" id="searchRecipeKnop" value="Submit">
-            </form>
-            <button id = "randomReceptKnop">Random Recept</button>
+    <div id = "book">
+        <div id = "bookCoverFrontInvertedFront">
+            <h1>Receptenboek</h1>
         </div>
-        <div class="bookCoverBack"></div>
-        <div class="bookBackBack"></div>
+        <div id = "bookCoverFrontInvertedBack"></div>
+        <div id="bookBackBack">
+            <div id="page">
+                    <div id="pageLeftBack"></div>
+                    <div id="pageLeft">
+                        <article>                      
+                        <h1>Crispy tempeh food stuff</h1>
+                        </article>
+                    </div>
+
+                    <div id="pageRight">
+                        <article>
+                        
+                            <button id="returnToMain">Main</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer>
-        <button id = "contactKnop">Contact</button>
-    </footer>
-
-    <script>
-        document.getElementById("contactKnop").addEventListener("click", function() {
-          window.location.href = "Contact.html";
-        });
-
-        document.getElementById("randomReceptKnop").addEventListener("click", function() {
-          window.location.href = "RandomRecept.html";
-        });
-    </script>
+<script src="js/MainJavaScript.js"></script>
 </body>
 </html>
