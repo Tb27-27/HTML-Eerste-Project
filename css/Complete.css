@@ -46,7 +46,22 @@ body {
 }
 
 h1 {
+    position: relative;
     text-decoration: underline;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 20px;
+}
+
+h1::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px; 
 }
 
 .icoontje {
@@ -71,9 +86,13 @@ h1 {
 }
 
 #bookCover, #bookCoverBack, #bookCoverFrontInvertedFront, #bookCoverFrontInvertedBack, #bookBackBack{
+    background-image: url("../images/Book_Cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     width: 50%;
     height: 100%;
-    background-color: black;
     position: absolute;
     left: 50%;
     text-align: center;
@@ -86,22 +105,24 @@ h1 {
     border: 2px solid white;
 }
 
-/* Alle zwarte gedeeltes van het boek */
+/* Alle cover gedeeltes van het boek */
 
 #bookCover {
     z-index: 3;
     backface-visibility: hidden;
     transform: rotateY(0deg); /* Starts closed */
-    
 }
 
 #bookCoverBack {
-    z-index: 1;
-    background: black;
+    z-index: 1; 
     transform: rotateY(0deg); /* Starts closed */
 }
 
 #bookCoverFrontInvertedBack {
+    background-image: url("../images/Book_Cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: rotateY(180deg);
     backface-visibility: hidden;
     z-index: 1;
