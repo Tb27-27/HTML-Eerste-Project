@@ -1,1 +1,1 @@
-Voor nu werkt alleen de "Contact" knop op Main.html en de "Main" knop op Contact.html
+Download de folder, en voer Main.html uit in een browser

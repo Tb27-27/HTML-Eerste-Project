@@ -1,3 +1,12 @@
+li {
+    text-align: left;
+    font-size: larger;
+}
 
 
-
+#receptPlaatje {
+    margin-top: 20px;
+    width: 50%;
+    border: 3px black solid;
+    border-radius: 5px;
+}

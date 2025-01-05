@@ -1,0 +1,28 @@
+:root {
+    --kleurPrimary: #E3A010;
+    --kleurSecondary: #E3BA10;
+    --kleurTertiary: #E38510;
+    --kleurQuadratary: #E36010;
+    --kleurSeptary: #E3D310;
+    --kleurOctary: #E3B85C;
+    --kleurText: black;
+}
+
+.receptBox {
+    background-color: var(--kleurOctary);
+    border-bottom: 1px solid #584b4b;
+
+    padding: 10px 0;
+}
+
+#alleReceptenBox {
+    margin: 10px;
+}
+
+h3 {
+    color: blue;
+}
+
+h3:hover {
+    cursor: pointer;
+}

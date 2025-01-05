@@ -23,6 +23,21 @@ body {
     background-image: url("../images/Tabletop.jpg");
 }
 
+
+/* FADEOUT voor recepDatabase */
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 100%;}
+    75% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+
 .zoomOut {
     animation-name: zoomOut;
     animation-duration: 2s;
@@ -36,13 +51,13 @@ body {
 }
 
 @keyframes zoomIn { 
-    0% {transform: scale(0.9);}     
-    100% {transform: scale(1)}
+    0% {transform: scale(0.95);}     
+    100% {transform: scale(1);}
 }
 
 @keyframes zoomOut { 
     0% {transform: scale(1);}     
-    100% {transform: scale(0.9)}
+    100% {transform: scale(0.95);}
 }
 
 h1 {
@@ -78,6 +93,7 @@ h1::before {
     justify-content: center;
     align-items: center;
     width: 95vw;
+    max-height: 100vh;
     height: 95vh;
     position: relative;
     /* background-color: var(--kleurSecondary); */
@@ -162,14 +178,19 @@ h1::before {
     animation-fill-mode: both;
     border: 2px dashed white;
     background-image: url("../images/paper-texture3.png");
+}
 
+#pageRight {
+    overflow: auto;
 }
 
 article {
+    margin: 2px;
     animation-name: makeAppear;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    overflow: auto;
 }
 
 @keyframes makeAppear {
@@ -286,3 +307,5 @@ button:hover {
     opacity: 0.95;
     background-color: var(--kleurQuadratary);
 }
+
+

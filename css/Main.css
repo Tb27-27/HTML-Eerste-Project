@@ -1,5 +1,5 @@
 body {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 form {
@@ -19,3 +19,28 @@ input {
     background-color: var(--kleurQuadratary);
 }
 
+button {
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+
+    #book {
+      transform: translateX(-25%);
+      width: 100vw;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    #book  {
+        transform: translateX(-45%);
+        width: 100%;
+    }
+    #bookBackBack{
+        width: 85vw;
+    }
+    #bookCover, #bookCoverBack, #bookCoverFrontInvertedFront, #bookCoverFrontInvertedBack, #bookBackBack, #bookCoverFrontInvertedBack{
+        width: 85vw;
+    }
+  }

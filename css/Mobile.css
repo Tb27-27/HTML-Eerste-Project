@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    #book  {
+        transform: translateX(-45%);
+        width: 100%;
+    }
+    #bookBackBack{
+        width: 85vw;
+    }
+    #bookCover, #bookCoverBack, #bookCoverFrontInvertedFront, #bookCoverFrontInvertedBack, #bookBackBack, #bookCoverFrontInvertedBack{
+        width: 85vw;
+    }
+  }
